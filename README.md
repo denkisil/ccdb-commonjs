@@ -11,7 +11,7 @@ npm i ccdb-commonjs
 
 Example of work with CCDB:
 ```js 
-const {SchemaTypes, Schema, Model, Database} = require("ccdb");
+const {SchemaTypes, Schema, Model, Database} = require("ccdb-commonjs");
 
 const path = require("path")
 
