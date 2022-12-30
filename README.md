@@ -6,7 +6,7 @@ Simple data storage based on JSON format.
 
 # Install
 ```
-npm i ccdb
+npm i ccdb-commonjs
 ```
 
 Example of work with CCDB:
