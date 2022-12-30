@@ -1,6 +1,6 @@
 {
   "name": "ccdb-commonjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple data storage, based on JSON",
   "main": "lib/index.js",
   "author": "DenKisil",
