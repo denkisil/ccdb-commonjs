@@ -13,7 +13,7 @@ npm i ccdb-commonjs
 ```js 
 const {SchemaTypes, Schema, Model, Database} = require("ccdb-commonjs");
 
-const path = require("path")
+const path = require("path");
 
 const db = new Database(path.join(__dirname, "db"));
 
@@ -24,7 +24,7 @@ const userModelTemp = {
 
 const userSchema = new Schema(userModelTemp);
 
-const Users = new Model("users", db.path, userSchema);
+const Users = new Model("users", userSchema, db.path);
 
 db.addModel(Users.name, Users);
 
