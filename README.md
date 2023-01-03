@@ -1,5 +1,9 @@
 # **C**onstru**c**table DB
 
+
+
+![npm](https://img.shields.io/npm/v/ccdb-commonjs)
+
 Simple data storage based on JSON format.
 
 ### This is CommonJS package. if you want to use version for ESMAScript, so [welcome](https://github.com/denkisil/ccdb)
