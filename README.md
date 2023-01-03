@@ -1,7 +1,6 @@
 # **C**onstru**c**table DB
 
-
-
+![npm](https://img.shields.io/npm/dt/ccdb-commonjs)
 ![npm](https://img.shields.io/npm/v/ccdb-commonjs)
 
 Simple data storage based on JSON format.
