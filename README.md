@@ -7,12 +7,18 @@ Simple data storage based on JSON format.
 
 ### This is CommonJS package. if you want to use version for ESMAScript, so [welcome](https://github.com/denkisil/ccdb)
 
+## Content
+- [Install](#install)
+- [Quick Start](#quick-start-to-ccdb)
+- [Examples](#examples)
+- [API reference](#api-reference)
+
 # Install
 ```
 npm i ccdb-commonjs
 ```
 
-# Example of work with CCDB:
+# Quick start to ccdb
 ```js 
 const {SchemaTypes, Schema, Model, Database} = require("ccdb-commonjs");
 
@@ -44,7 +50,7 @@ const users = [
 
 const writed = Users.writeMany(users);
 
-const deleted = Users.deleteDocsByParam("id", 1);
+const deleted = Users.deleteDocByParams({id: 1});
 
 const usersAll = Users.read();
 
@@ -92,9 +98,11 @@ console.log(users);
 
 - `Model.writeMany(/*array of objects to write*/)` - write a array of data to database
 
-- `Model.getDocByParam(/*name of param*/, /*value of param*/)` - get document from database by special parameter
+- `Model.getDocByParams(/*object of params*/)` - get document from database by special parameter
 
-- `Model.deleteDocByParam(/*name of param*/, // Model.deleteDocByParam - delete doc/docs by special parameter)` delete doc/docs by special parameter
+- `Model.updateDocByParams(/*object of parameters*/, /*object to get*/)` - update document in database, which goted by few parameters
+
+- `Model.deleteDocByParam(/*object of params*/)`-  delete doc/docs by special parameter
 
 
 ## `new Schema(/*template of schema*/)` - class which makes schemas for models
