@@ -12,6 +12,11 @@ Simple data storage based on JSON format.
 - [Quick Start](#quick-start-to-ccdb)
 - [Examples](#examples)
 - [API reference](#api-reference)
+  - [Database](#database)
+  - [Model](#model)
+  - [Schema](#schema)
+  - [SchemaFields](#schemafields)
+  - [FS](#fs)
 
 # Install
 ```
@@ -27,8 +32,14 @@ const path = require("path");
 const db = new Database(path.join(__dirname, "db"));
 
 const userModelTemp = {
-	id: SchemaTypes.number,
-	name: SchemaTypes.string
+	id: { 
+		type: SchemaTypes.number,
+		required: true
+	},
+	name: { 
+		type: SchemaTypes.string,
+		required: true
+	}
 }
 
 const userSchema = new Schema(userModelTemp);
@@ -58,6 +69,10 @@ console.log(users);
 
 ```
 
+# Examples
+
+You can see in folder `lib/examples`
+
 # API reference
 
 ## Database
@@ -74,6 +89,7 @@ console.log(users);
 #### Methods
 - `Database.addModel(/*name of model*/, /*instance of Model's class*/)` - adds a new model to database and creates a file of model
 
+## Model
 
 ## `new Model(/*name of model*/, /*model's schema*/, /*path, where database placed*/)` - class for making models.
 
@@ -98,12 +114,13 @@ console.log(users);
 
 - `Model.writeMany(/*array of objects to write*/)` - write a array of data to database
 
-- `Model.getDocByParams(/*object of params*/)` - get document from database by special parameter
+- `Model.getDocByParams(/*object of parameters*/)` - get document from database by object of parameters
 
 - `Model.updateDocByParams(/*object of parameters*/, /*object to get*/)` - update document in database, which goted by few parameters
 
-- `Model.deleteDocByParam(/*object of params*/)`-  delete doc/docs by special parameter
+- `Model.deleteDocByParams(/*object of parameters*/)` - delete doc/docs by special parameter
 
+## Schema
 
 ## `new Schema(/*template of schema*/)` - class which makes schemas for models
 
@@ -111,6 +128,19 @@ console.log(users);
 
 - `Schema.schema` - template of schema
 
+## SchemaField
+
+## `new SchemaField(/*object to make instance*/)` - class of schema field
+
+### Parameters
+
+- `SchemaField.type` - data type, required by schema field; required option
+
+- `SchemaField.required` - it check needest filling of this field; in default `false`
+ 
+- `SchemaField.defaultValue` - value, which inserts to field, if it not required; in default `null`
+
+## FS
 
 ## `new FS()/*(FileSystem)*/` - class for direct control on the database files
 
@@ -129,3 +159,4 @@ console.log(users);
 - `FS.addDatabaseFile(/*name of database file*/, /*schema of database file*/)` - adds new database file
 
 - `FS.clearDatabaseData(/*path to database file*/)` - clears all data in database file
+
