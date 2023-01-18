@@ -15,7 +15,7 @@ Simple data storage based on JSON format.
   - [Database](#database)
   - [Model](#model)
   - [Schema](#schema)
-  - [SchemaFields](#schemafield)
+  - [SchemaField](#schemafield)
   - [FS](#fs)
 
 # Install
@@ -108,8 +108,6 @@ You can see in folder `lib/examples`
 
 - `Model.read()` - reads all database file content, includes name and schema of database
 
-- `Model.dataValidByScheme(data to validation)` - does data validation according with scheme
-
 - `Model.writeOne(/*object to write*/)` - write one exemplar of data to database
 
 - `Model.writeMany(/*array of objects to write*/)` - write a array of data to database
@@ -139,6 +137,15 @@ You can see in folder `lib/examples`
 - `SchemaField.required` - it check needest filling of this field; in default `false`
  
 - `SchemaField.defaultValue` - value, which inserts to field, if it not required; in default `null`
+
+- `SchemaField.maxNumValue` - value, which set maximal value for field
+
+- `SchemaField.minNumValue` - value, which set minimal value for field
+
+### Methods
+
+- `Schema.dataValidByScheme(data to validation)` - does data validation according with scheme
+
 
 ## FS
 
