@@ -142,6 +142,10 @@ You can see in folder `lib/examples`
 
 - `SchemaField.minNumValue` - value, which set minimal value for field
 
+- `SchemaField.maxStringLength` - value, which set maximal length of string
+
+- `SchemaField.minStringLength` - value, which set minimal length of string
+
 ### Methods
 
 - `Schema.dataValidByScheme(data to validation)` - does data validation according with scheme
