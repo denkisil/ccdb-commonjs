@@ -5,6 +5,8 @@
 
 ![image](static/ccdb_logo_minified.png)
 
+[Discord Server](https://discord.gg/5hqUtn7Z)
+
 Simple data storage based on JSON format.
 
 ### This is CommonJS package. if you want to use version for ESMAScript, so [welcome](https://github.com/denkisil/ccdb)
