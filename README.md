@@ -3,7 +3,7 @@
 ![npm](https://img.shields.io/npm/dt/ccdb-commonjs)
 ![npm](https://img.shields.io/npm/v/ccdb-commonjs)
 
-<img src="static/ccdb_logo_minified.png" align="center">
+![image](static/ccdb_logo_minified.png)
 
 Simple data storage based on JSON format.
 
