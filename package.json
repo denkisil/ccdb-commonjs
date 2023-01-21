@@ -4,6 +4,7 @@
   "type": "commonjs",
   "description": "Simple data storage, based on JSON",
   "main": "lib/index.js",
+  "readmeFile": "README.md",
   "author": "DenKisil",
   "repository": "https://gethub.com/denkisil/ccdb-commonjs",
   "license": "MIT",
